@@ -36,6 +36,16 @@ return [
     */
 
     'mailers' => [
+        
+        'failover' => [
+            'transport' => 'failover',
+            'mailers' => [
+                'postmark',
+                'mailgun',
+                'sendmail',
+            ],
+        ],
+        
 
         'smtp' => [
             'transport' => 'smtp',
@@ -55,7 +65,13 @@ return [
 
         'postmark' => [
             'transport' => 'postmark',
-            // 'message_stream_id' => env('POSTMARK_MESSAGE_STREAM_ID'),
+            'message_stream_id' => env('POSTMARK_MESSAGE_STREAM_ID'),
+            // 'client' => [
+            //     'timeout' => 5,
+            // ],
+        ],
+        'mailgun' => [
+            'transport' => 'mailgun',
             // 'client' => [
             //     'timeout' => 5,
             // ],
