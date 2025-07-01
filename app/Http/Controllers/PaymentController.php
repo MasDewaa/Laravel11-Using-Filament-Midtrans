@@ -96,7 +96,7 @@ class PaymentController extends Controller
 
                 // Update transaksi status to 'lunas'
                 $transaksi = $payment->transaksi;
-                $transaksi->status = 'lunas';
+                $transaksi->status = 'proses';
                 $transaksi->save();
             } else {
                 // Update payment status to 'failed'

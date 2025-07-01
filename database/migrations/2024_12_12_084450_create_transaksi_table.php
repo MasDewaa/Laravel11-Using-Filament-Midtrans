@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->decimal('total_harga', 15, 2)->default(0);
             $table->string('additional')->nullable();
-            $table->enum('status', ['belum bayar', 'lunas', 'proses', 'selesai', 'batal'])->default('belum bayar');
+            $table->enum('status', ['belum bayar', 'proses', 'selesai'])->default('belum bayar');
             $table->timestamps();
         });
     }

@@ -27,4 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
             dropdownMenu.classList.add('hidden');
         }
     });
+    const katalogItems = document.querySelector("#katalog-items");
+    const items = katalogItems.querySelectorAll(".grid > div");
+
+    if (items.length > 6) {
+        // Menambahkan kelas untuk mendukung scroll vertikal
+        katalogItems.style.maxHeight = "75vh";
+        katalogItems.style.overflowY = "auto";
+    }
 });

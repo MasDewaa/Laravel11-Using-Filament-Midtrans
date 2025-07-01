@@ -63,10 +63,8 @@ class TransaksiResource extends Resource
                     ->label('Status Transaksi')
                     ->options([
                         'belum bayar' => 'belum bayar',  // Yellow color for pending
-                        'lunas' => 'lunas', // Green color for completed
                         'proses' => 'proses', // Green color for processing
                         'selesai' => 'selesai', // Green color for completed
-                        'batal' => 'batal', // Red color for cancelled
                     ])
                     ->required(),
             ]);

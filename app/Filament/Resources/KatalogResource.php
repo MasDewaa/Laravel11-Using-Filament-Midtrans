@@ -69,7 +69,7 @@ class KatalogResource extends Resource
     public static function getRelations(): array
     {
         return [
-            // Define relations if needed
+
         ];
     }
 

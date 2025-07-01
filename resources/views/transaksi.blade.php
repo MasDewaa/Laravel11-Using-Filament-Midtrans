@@ -30,7 +30,7 @@
                             <td class="px-6 py-4 whitespace-nowrap">{{ ucfirst($transaksi->status) }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">{{ $transaksi->additional }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                @if($transaksi->status !== 'lunas')
+                                @if($transaksi->status == 'belum bayar')
                                     <button onclick="payWithMidtrans('{{ $transaksi->id }}')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
                                         Bayar
                                     </button>
